@@ -33,7 +33,11 @@ module.exports = {
   },
   devtool: 'cheap-source-map',
   resolve: {
-    // alia:
+    // 如果多个文件共享相同的名称但具有不同的扩展名，则webpack将解析具有列表中第一个列出的扩展名的文件并跳过其余文件。
+    extensions: ['.js', '.vue', '.less', '.css', '.scss', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, '..', 'src')
+    }
   },
   plugins: [
     // 解析*.vue文件必须引用VueLoaderPlugin
