@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack --config build/webpack.base.conf.js --progress",
+    "build": "webpack --config build/webpack.prod.conf.js --progress",
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --open --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
