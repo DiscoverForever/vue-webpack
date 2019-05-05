@@ -2,10 +2,11 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-
 module.exports = {
+  // 基本目录，一个绝对路径，用于从配置中解析entry points和loaders
+  context: path.resolve(__dirname, '..'),
   entry: {
-    main: path.resolve('src/main.js')
+    main: './src/main.js'
   },
   output: {
     filename: 'bundle.js'
